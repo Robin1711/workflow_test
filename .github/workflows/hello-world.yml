@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  test-helloworld:
+  hello-world:
     runs-on: ubuntu-latest
 
     steps:
