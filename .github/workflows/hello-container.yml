@@ -25,12 +25,16 @@ jobs:
                 username: ${{ secrets.DOCKER_USER }}
                 password: ${{ secrets.DOCKER_PASS }}
 
-            - name: Build and Push the Docker image
-            # docker-compose build --no-cache --force-rm 
+            - name: Build and Tag the Docker images
+                # docker-compose build --no-cache --force-rm 
               run: |
                 docker build -t my-nginx-image .
                 docker tag my-nginx-image:latest robin1711/my-test-repository:0.2.0
-                docker push robin1711/my-test-repository:0.2.0
                 docker tag my-nginx-image:latest robin1711/my-test-repository:latest
-                docker push robin1711/my-test-repository:latest
 
+            - name: Push the Docker images
+                # docker-compose build --no-cache --force-rm 
+              run: |
+                docker push robin1711/my-test-repository:0.2.0
+                docker push robin1711/my-test-repository:latest
+    
