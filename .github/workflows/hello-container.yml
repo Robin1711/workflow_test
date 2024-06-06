@@ -1,0 +1,23 @@
+name: hello-container
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello-container:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build image and Push image to Docker Hub
+        run: |
+            docker build -t my-nginx-image .
+            docker tag my-nginx-image:latest robin1711/my-test-repository:0.2.0
+            docker push robin1711/my-test-repository:0.2.0
+            docker tag my-nginx-image:latest robin1711/my-test-repository:latest
+            docker push robin1711/my-test-repository:latest
