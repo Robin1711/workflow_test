@@ -1,0 +1,1 @@
+docker build -t django-project-image -f deployment/Dockerfile .

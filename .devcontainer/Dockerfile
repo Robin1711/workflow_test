@@ -1,3 +1,5 @@
+# Dockerfile has to be execute in the root dir
+# FROM python:3.11
 FROM mcr.microsoft.com/devcontainers/python:1-3.11-bullseye
 
 ENV PYTHONDONTWRITEBYTECODE 1
