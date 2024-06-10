@@ -28,13 +28,13 @@ jobs:
             - name: Build and Push the Docker image
             # docker-compose build --no-cache --force-rm 
               run: |
-                docker build -t django-app-image .
-                docker tag django-app-image:latest robin1711/my-test-repository:1.0.0
-                docker tag django-app-image:latest robin1711/my-test-repository:latest
+                docker build -t django-project-image -f deployment/Dockerfile .
+                docker tag django-project-image:latest robin1711/my-test-repository:1.0.0
+                docker tag django-project-image:latest robin1711/my-test-repository:latest
 
 
             - name: Build and Push the Docker image
               run: |
-                docker push robin1711/my-test-repository:0.2.0
+                docker push robin1711/my-test-repository:1.0.0
                 docker push robin1711/my-test-repository:latest
     
