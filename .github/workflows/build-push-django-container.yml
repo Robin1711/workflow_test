@@ -1,4 +1,4 @@
-name: hello-container
+name: build-push-django-container
 
 on:
     workflow_dispatch:
@@ -25,15 +25,15 @@ jobs:
                 username: ${{ secrets.DOCKER_USER }}
                 password: ${{ secrets.DOCKER_PASS }}
 
-            - name: Build and Tag the Docker images
-                # docker-compose build --no-cache --force-rm 
+            - name: Build and Push the Docker image
+            # docker-compose build --no-cache --force-rm 
               run: |
-                docker build -t my-nginx-image .
-                docker tag my-nginx-image:latest robin1711/my-test-repository:0.2.0
-                docker tag my-nginx-image:latest robin1711/my-test-repository:latest
+                docker build -t django-app-image .
+                docker tag django-app-image:latest robin1711/my-test-repository:1.0.0
+                docker tag django-app-image:latest robin1711/my-test-repository:latest
 
-            - name: Push the Docker images
-                # docker-compose build --no-cache --force-rm 
+
+            - name: Build and Push the Docker image
               run: |
                 docker push robin1711/my-test-repository:0.2.0
                 docker push robin1711/my-test-repository:latest

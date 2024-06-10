@@ -1,3 +1,6 @@
+**/data
+.devcontainer/
+
 node_modules
 coverage
 npm-debug.log
