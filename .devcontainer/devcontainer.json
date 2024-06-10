@@ -8,7 +8,7 @@
 	"forwardPorts": [5000, 5432, 8000],
 
 	// "forwardPorts": [5000, 5432, 8000],
-	"postCreateCommand": "pip install --user -r src/requirements.txt && python src/manage.py makemigrations && python src/manage.py migrate"
+	"postCreateCommand": "pip install --user -r src/requirements.txt && python src/manage.py makemigrations && python src/manage.py migrate",
 	//  && python src/manage.py createsuperuser --noinput",
 	// "postStartCommand": "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
 
@@ -27,4 +27,17 @@
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"github.vscode-github-actions",
+				"ms-python.autopep8",
+				"ms-python.debugpy",
+				"ms-python.python",
+				"ms-azuretools.vscode-docker",
+				"ms-python.vscode-pylance"
+			]
+		}
+	}
 }
