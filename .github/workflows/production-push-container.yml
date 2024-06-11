@@ -1,4 +1,4 @@
-name: build-push-django-container
+name: production-push-container
 
 on:
     workflow_dispatch:
