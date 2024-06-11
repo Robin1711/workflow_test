@@ -1,4 +1,4 @@
-name: build-push-django-container
+name: dev-test-building-container
 
 on:
     workflow_dispatch:
