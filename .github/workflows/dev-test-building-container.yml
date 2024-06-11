@@ -3,7 +3,7 @@ name: dev-test-building-container
 on:
     workflow_dispatch:
     push:
-        branches: ["development", "test"]
+        branches: ["development"]
 
 env:
     MY_ENV_VAR: value
