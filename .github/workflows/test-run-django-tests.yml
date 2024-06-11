@@ -1,0 +1,22 @@
+name: test-run-django-tests
+
+on:
+    workflow_dispatch:
+    push:
+        branches: ["test"]
+        
+env:
+    MY_ENV_VAR: value
+     
+jobs:
+    hello-container:
+        runs-on: ubuntu-latest
+        environment: test
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+  
+            - name: Echo something as placeholder
+              run: echo "This has not been implemented yet"
+                  
