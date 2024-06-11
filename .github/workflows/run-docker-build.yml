@@ -1,10 +1,10 @@
-name: test-run-django-tests
+name: run-docker-builds
 
 on:
     workflow_dispatch:
     push:
-        branches: ["test"]
-        
+        branches: ["test", "development"]
+
 env:
     MY_ENV_VAR: value
      
@@ -16,7 +16,9 @@ jobs:
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
-  
+
+            - name: Set up Docker Buildx
+              uses: docker/setup-buildx-action@v2
+
             - name: Echo something as placeholder
               run: echo "This has not been implemented yet"
-                  
