@@ -13,7 +13,7 @@ env:
 jobs:
     docker-build:
         runs-on: ubuntu-latest
-        environment: test
+        environment: development
 
         steps:
             - name: Checkout repository
@@ -24,4 +24,3 @@ jobs:
 
             - name: Build and Push the Docker image
               run: docker build -t image:test -f deployment/production/Dockerfile .
-  

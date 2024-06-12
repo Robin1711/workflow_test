@@ -11,7 +11,7 @@ env:
 jobs:
     django-tests:
         runs-on: ubuntu-latest
-        environment: test
+        environment: development
 
         steps:
           - name: Checkout repository
