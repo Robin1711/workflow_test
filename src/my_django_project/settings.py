@@ -48,6 +48,9 @@ INSTALLED_APPS = [
     'app'
 ]
 
+# # Specify the test module
+# TESTS = 'app.tests'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
