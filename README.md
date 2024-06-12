@@ -1,8 +1,3 @@
-# ToDo
-- Block pushing to main
-- Block pushing to test
-- Only pull requests | main <- test |
-- Only pull requests | test <- dev |
 
 # Rules
 - Run django tests upon pull request | main <- test |

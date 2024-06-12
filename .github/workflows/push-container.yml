@@ -3,7 +3,7 @@ name: push-container
 on:
     workflow_dispatch:
     push:
-        branches: ["production"]
+        branches: ["main"]
 
 env:
     REGISTRY: docker.io
