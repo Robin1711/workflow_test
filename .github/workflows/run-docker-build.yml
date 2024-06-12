@@ -2,8 +2,6 @@ name: run-docker-builds
 
 on:
     workflow_dispatch:
-    push:
-        branches: ["test", "development"]
     pull_request:
         branches: ["main", "test", "development"]
   
@@ -22,5 +20,5 @@ jobs:
             - name: Set up Docker Buildx
               uses: docker/setup-buildx-action@v2
 
-            - name: Build and Push the Docker image
+            - name: Build Docker image
               run: docker build -t image:test -f deployment/production/Dockerfile .
