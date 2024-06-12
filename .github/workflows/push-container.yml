@@ -9,7 +9,7 @@ env:
     REGISTRY: docker.io
      
 jobs:
-    hello-container:
+    push-container:
         runs-on: ubuntu-latest
         environment: production
 
