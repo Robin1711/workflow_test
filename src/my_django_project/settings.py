@@ -100,12 +100,9 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+# Switch the default database based on environment variable
+database_name = os.getenv('DJANGO_DATABASE', 'default')
+DATABASES['default'] = DATABASES[database_name]
 
 
 # Password validation

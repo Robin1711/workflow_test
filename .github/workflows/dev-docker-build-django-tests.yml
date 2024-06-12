@@ -31,10 +31,12 @@ jobs:
 
       - name: Apply migrations and Run tests
         run: |
-          python src/manage.py makemigrations --database=test
+          python src/manage.py makemigrations
           python src/manage.py migrate --database=test
-          python src/manage.py test app --database=test
-
+          python src/manage.py test app
+        env:
+          DJANGO_DATABASE: test
+  
   docker-build:
     runs-on: ubuntu-latest
     environment: development
