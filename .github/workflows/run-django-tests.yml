@@ -3,7 +3,7 @@ name: run-django-tests
 on:
     workflow_dispatch:
     pull_request:
-        branches: ["main", "test"]
+        branches: ["main", "test", "development"]
 
 env:
     MY_ENV_VAR: value
