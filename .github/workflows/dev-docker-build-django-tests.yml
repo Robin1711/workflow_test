@@ -50,4 +50,3 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t image:test -f deployment/production/Dockerfile .
-
